@@ -29,6 +29,7 @@
     "chart.js": "^2.9.3",
     "chartjs-plugin-zoom": "^0.7.7",
     "cordova-android": "^8.1.0",
+    "cordova-ios": "^5.1.1",
     "firebase": "^7.15.0",
     "ng2-charts": "^2.3.2",
     "node-js-marker-clusterer": "^1.0.0",
@@ -79,7 +80,8 @@
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }

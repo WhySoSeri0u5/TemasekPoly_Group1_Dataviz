@@ -33,7 +33,7 @@ export class Tab3Page {
     responsive: true,
     title: {
       display: true,
-      text: 'Average Temperature'
+      text: 'Avg Temp / Dengue / Rainfall'
     },
     pan: {
       enabled: false,
