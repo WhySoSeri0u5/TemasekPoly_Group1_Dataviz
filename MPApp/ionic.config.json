@@ -1,0 +1,8 @@
+{
+  "name": "MPApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

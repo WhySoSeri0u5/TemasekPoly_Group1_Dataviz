@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: red; text-align: center; font-size: 20px;">
+      Temperature and Dengue Visualisation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content   >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list-header color="light">Temperature/Dengue Bar Graph</ion-list-header>
+    <ion-card class="welcome-card">
+      <ion-card-content >
+
+    <canvas baseChart 
+    [datasets]="chartData" 
+    [labels]="chartLabels" 
+    [options]="chartOptions" 
+    [colors]="chartColors"
+    [legend]="showLegend" 
+    [chartType]="chartType">
+    </canvas>
+
+    <ion-list>
+      <ion-item class="itemitem">
+          <ion-select class="yeartext" [(ngModel)]="year_data" name="year_data" placeholder="Select Year">
+            <ion-select-option value="2015">2015</ion-select-option>
+            <ion-select-option value="2016">2016</ion-select-option>
+            <ion-select-option value="2017">2017</ion-select-option>
+            <ion-select-option value="2018">2018</ion-select-option>
+            <ion-select-option value="2019">2019</ion-select-option>
+            <ion-select-option value="2020">2020</ion-select-option>
+          </ion-select>
+      </ion-item>
+        <ion-button class="buttonbutton" (click)="getData()">Submit</ion-button>
+    </ion-list>
+  </ion-card-content>
+  </ion-card>
+
+
+
+  <ion-content>
+    <ion-list-header color="light">Dengue Total Cases</ion-list-header>
+    <ion-card class="welcome-card">
+      <ion-card-content>
+        <canvas #barChart></canvas>
+
+        <ion-list>
+          <ion-item>
+              <ion-select class="yeartext" [(ngModel)]="year_dataa" name="year_dataa" placeholder="Select Year">
+                <ion-select-option value="2015">2015</ion-select-option>
+                <ion-select-option value="2016">2016</ion-select-option>
+                <ion-select-option value="2017">2017</ion-select-option>
+                <ion-select-option value="2018">2018</ion-select-option>
+                <ion-select-option value="2019">2019</ion-select-option>
+                <ion-select-option value="2020">2020</ion-select-option>
+              </ion-select>
+          </ion-item>
+            <ion-button class="buttonbutton" (click)="createBarChart()">Submit</ion-button>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+
+  </ion-content>
+  </ion-content>
+
+
+</ion-content>
