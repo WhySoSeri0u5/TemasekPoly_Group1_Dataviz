@@ -1,0 +1,83 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Google Maps
+      <ion-icon name="map"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div #map id="map"></div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <ion-button [disabled]="toggle == 0" style="width: 100%" (click)="showClusterVisual(); loadMap()">
+          <ion-icon name="scan-circle-outline" slot="start"></ion-icon>
+          Cluster Visualisation
+        </ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button [disabled]="toggle == 2" style="width: 100%" color="warning"
+          (click)="showCircleVisual(); loadMap()">
+          <ion-icon name="locate" slot="start"></ion-icon>
+          Circle Visualisation
+        </ion-button>
+      </ion-col>
+      <ion-col col-4>
+        <ion-button [disabled]="toggle == 1" style="width: 100%" color="danger" (click)="showHeatVisual(); loadMap()">
+          <ion-icon name="thermometer-outline" slot="start"></ion-icon>
+          Heatmap Visualisation
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div *ngIf="toggle == 1">
+    <ion-card>
+      <ion-card-content>
+        <p>Filters for the Heat Map</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-fab horizontal="start" color="danger">
+      <ion-fab-button>
+        <ion-icon name="bug-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list vertical="bottom">
+        <ion-button color="secondary" (click)="changeGradient()" data-tooltip="Change Dengue Visual Colours">Dengue
+          Gradient</ion-button>
+        <ion-button color="secondary" (click)="changeRadius()" data-tooltip="Change Dengue Visual Size">Dengue Radius
+        </ion-button>
+        <ion-button color="secondary" (click)="changeOpacity()" data-tooltip="Hide Dengue Visual">Dengue Opacity
+        </ion-button>
+      </ion-fab-list>
+    </ion-fab>
+
+    <ion-fab horizontal="end" color="danger">
+      <ion-fab-button>
+        <ion-icon name="tablet-landscape-sharp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list vertical="bottom" class="tooltip-left">
+        <ion-button style="margin-right: 139%;" color="secondary" (click)="changeGradient2()"
+          data-tooltip="Change Breeding Visual Colour">Breeding
+          Gradient</ion-button>
+        <ion-button style="margin-right: 139%;" color="secondary" (click)="changeRadius2()"
+          data-tooltip="Change Breeding Visual Size">Breeding
+          Radius</ion-button>
+        <ion-button style="margin-right: 139%;" color="secondary" (click)="changeOpacity2()"
+          data-tooltip="Hide Breeding Visual">Breeding Opacity
+        </ion-button>
+      </ion-fab-list>
+    </ion-fab>
+    <br><br><br><br>
+  </div>
+
+</ion-content>
+
+
+
+<!--<ion-button color="secondary" (click)="changeGradient()">Change gradient</ion-button>
+  <ion-button color="secondary" (click)="changeRadius()">Change Radius</ion-button>
+  <ion-button color="secondary" (click)="changeOpacity()">Change Opacity</ion-button>-->
