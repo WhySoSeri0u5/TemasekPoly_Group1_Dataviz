@@ -1,8 +1,3 @@
-{
-  "name": "MPApp",
-  "integrations": {
-    "capacitor": {},
-    "cordova": {}
-  },
-  "type": "angular"
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:317096c04d7e23eb7c853631796d73abe6f3ae044298f3a002b3896575cc0965
+size 107
