@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2e2dffd949510a4233ccd366e19530f3e841dc2444877b51957ae0f70fdce268
-size 222
+{
+  "appId": "io.ionic.starter",
+  "appName": "MPApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}
